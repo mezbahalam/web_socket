@@ -3,9 +3,13 @@
 %h1= @product.name
 
 %p
-  = image_tag @product.image
+  = image_tag(@product.image, size: "450x400")
+
 
 %p
   = link_to 'Edit', edit_product_path(@product)
   \|
   = link_to 'Back', products_path
+
+=render "auction"
+=render "bid"
